@@ -3,6 +3,7 @@ package com.example.android.hw2;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class ThirdActivity extends AppCompatActivity {
     private ArrayList<Brew> brews;
     private RecyclerView recyclerView;
     private Context context;
+    private TextView textView_resultsCount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,8 +33,11 @@ public class ThirdActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         context = recyclerView.getContext();
         brews = new ArrayList<>();
+        textView_resultsCount = findViewById(R.id.textView_resultsCount);
 
         int count = intent.getIntExtra("count", 0);
+
+        textView_resultsCount.setText("We found " + count + " results");
 
 
         String[] names = new String[count];

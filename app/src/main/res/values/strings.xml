@@ -10,4 +10,5 @@
     <string name="show_results">Show Results</string>
     <string name="toast_message">Fill at least one field</string>
     <string name="toast_message_date">Date in incorrect format (MM/YYYY)</string>
+    <string name="results_count">We found % results</string>
 </resources>
